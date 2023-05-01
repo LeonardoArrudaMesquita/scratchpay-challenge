@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LeonardoArrudaMesquita/scratchpay-challenge/issues"
   },
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.2"
+  },
   "homepage": "https://github.com/LeonardoArrudaMesquita/scratchpay-challenge#readme"
 }
