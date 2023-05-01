@@ -16,7 +16,9 @@
     "url": "https://github.com/LeonardoArrudaMesquita/scratchpay-challenge/issues"
   },
   "devDependencies": {
-    "git-commit-msg-linter": "^3.0.2"
+    "@types/node": "^18.16.3",
+    "git-commit-msg-linter": "^3.0.2",
+    "typescript": "^5.0.4"
   },
   "homepage": "https://github.com/LeonardoArrudaMesquita/scratchpay-challenge#readme"
 }
