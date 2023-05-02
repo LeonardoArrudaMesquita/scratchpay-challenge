@@ -10,12 +10,15 @@ export class ClinicController implements Controller {
   async handle (request: ClinicController.Request): Promise<HttpResponse> {
     try {
       const dentalClinics = await this.loadDentalClinics.load()
+      const vetClinics = await this.loadVetClinics.load()
+
+      const clinics = [...dentalClinics, ...vetClinics]
 
       if (!request) {
-        return ok(dentalClinics)
+        return ok(clinics)
       }
 
-      return ok(dentalClinics)
+      return ok(clinics)
     } catch (error) {
       return internalServerError()
     }

@@ -1,9 +1,9 @@
-import { type DentalModel } from '../../domain/models'
+import { type ClinicResult } from '../../domain/models'
 
 export interface LoadDentalClinics {
   load: () => Promise<LoadDentalClinics.Result>
 }
 
 export namespace LoadDentalClinics {
-  export type Result = DentalModel[]
+  export type Result = ClinicResult[]
 }
