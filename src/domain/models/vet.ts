@@ -5,6 +5,6 @@ export type VetModel = {
 }
 
 type Opening = {
-  from: string
   to: string
+  from: string
 }

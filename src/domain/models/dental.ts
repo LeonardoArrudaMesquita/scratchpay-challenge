@@ -5,6 +5,6 @@ export type DentalModel = {
 }
 
 type Availability = {
-  from: string
   to: string
+  from: string
 }

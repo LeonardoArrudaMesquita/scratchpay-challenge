@@ -1,4 +1,4 @@
-import { type Controller } from '@/presentation/protocols'
+import { type Controller } from '../../presentation/protocols/controller'
 
 import { type Request, type Response } from 'express'
 

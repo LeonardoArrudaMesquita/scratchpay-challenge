@@ -5,6 +5,6 @@ export type ClinicResult = {
 }
 
 type Availability = {
-  from: string
   to: string
+  from: string
 }
