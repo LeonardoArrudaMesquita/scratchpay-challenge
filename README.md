@@ -30,23 +30,37 @@ This project was designed to test my back-end knowledge and assess my suitabilit
 - Standard Javascript Style
 - Sucrase
 
-## 📦 Running Locally
+## 📦 Running Locally on Machine or Docker Machine
 
-First, Install the node_modules
+Choose one of the options below:
+
+### **Machine**
+
+Install the node_modules
 
 ```bash
 $ yarn
 ```
-Then,
+Then
 
 ```bash
 $ yarn start
 ```
-Finally, open your browser or any HTTP Request Tool and exec the following GET request: http://localhost:5050/api/clinics
+### **Docker**
+
+Make sure you have docker installed on your machine
+
+Then run the following commands
+
+```bash
+$ docker build -t scratchpay-api .
+$ docker run --name scratchpay-api  -p 3000:3000 scratchpay-api
+```
+Now open your browser or any HTTP Request Tool and exec the following GET request: http://localhost:3000/api/clinics
 
 You can filter all the clinics passing arguments through query params. For example:
 
-http://localhost:5050/api/clinics?name=hospital&state=CA
+http://localhost:3000/api/clinics?name=hospital&state=CA
 
 ## 🤝 Contributing
 
