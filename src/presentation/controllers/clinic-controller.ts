@@ -12,6 +12,7 @@ export class ClinicController implements Controller {
     try {
       const dentalClinics = await this.loadDentalClinics.load()
       const vetClinics = await this.loadVetClinics.load()
+      const clinics = [...dentalClinics, ...vetClinics]
 
       function filterClinics (clinics: ClinicResult[], filters: ClinicController.Request): ClinicResult[] {
         return clinics.filter(clinic => {
@@ -25,18 +26,12 @@ export class ClinicController implements Controller {
       }
 
       if (!Object.keys(request).length) {
-        return ok([...dentalClinics, ...vetClinics])
-      }
-
-      const filteredDentalClinics = filterClinics(dentalClinics, request)
-      const filteredVetClinics = filterClinics(vetClinics, request)
-      const clinics = [...filteredDentalClinics, ...filteredVetClinics]
-
-      if (!request) {
         return ok(clinics)
       }
 
-      return ok(clinics)
+      const filteredClinics = filterClinics(clinics, request)
+
+      return ok(filteredClinics)
     } catch (error) {
       return internalServerError()
     }
