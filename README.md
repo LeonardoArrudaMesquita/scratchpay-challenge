@@ -62,7 +62,7 @@ You can filter all the clinics passing arguments through query params. For examp
 
 http://localhost:3000/api/clinics?name=hospital&state=CA
 
-## Endpoints
+## ✅ Endpoints
 
 ### **Request**
 
