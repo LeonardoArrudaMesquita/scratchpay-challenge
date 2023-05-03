@@ -62,6 +62,34 @@ You can filter all the clinics passing arguments through query params. For examp
 
 http://localhost:3000/api/clinics?name=hospital&state=CA
 
+## Endpoints
+
+### **Request**
+
+`GET /api/clinics`
+
+    curl --location --request GET 'http://localhost:3000/api/clinics?name=Clinic&state=CA&from=10:00&to=20:00'
+
+**Query String - Filter**
+
+- name
+- state
+- to
+- from
+
+### **Response**
+
+    [
+        {
+            "name": "any_name",
+            "state": "any_state",
+            "availability": {
+                "from": "00:00",
+                "to": "23:59"
+            }
+        },
+    ]
+
 ## 🤝 Contributing
 
 <table>
