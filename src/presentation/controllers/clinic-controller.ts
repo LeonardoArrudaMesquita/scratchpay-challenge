@@ -3,7 +3,7 @@ import { type Controller } from '../protocols/controller'
 import { type HttpResponse } from '../protocols/http'
 import { type LoadDentalClinics } from '../../domain/usecases/load-dental-clinics'
 import { type LoadVetClinics } from '../../domain/usecases/load-vet-clinics'
-import { type ClinicResult } from '../../domain/models'
+import { type ClinicModel } from '../../domain/models'
 
 export class ClinicController implements Controller {
   constructor (private readonly loadDentalClinics: LoadDentalClinics, private readonly loadVetClinics: LoadVetClinics) {}
@@ -14,7 +14,7 @@ export class ClinicController implements Controller {
       const vetClinics = await this.loadVetClinics.load()
       const clinics = [...dentalClinics, ...vetClinics]
 
-      function filterClinics (clinics: ClinicResult[], filters: ClinicController.Request): ClinicResult[] {
+      function filterClinics (clinics: ClinicModel[], filters: ClinicController.Request): ClinicModel[] {
         return clinics.filter(clinic => {
           return (
             (!filters.name || clinic.name.toLowerCase().includes(filters.name.toLowerCase())) &&

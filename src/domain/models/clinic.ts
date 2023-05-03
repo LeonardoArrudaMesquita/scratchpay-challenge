@@ -1,4 +1,4 @@
-export type ClinicResult = {
+export type ClinicModel = {
   name: string
   state: string
   availability: Availability
