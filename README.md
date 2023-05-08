@@ -105,3 +105,5 @@ http://localhost:3000/api/clinics?name=hospital&state=CA
 </table>
 
 Follow me on <a href="https://github.com/LeonardoArrudaMesquita">Github</a> and <a href="https://www.linkedin.com/in/leonardo-arruda-40053b146/">Linkedin</a>!
+
+(Minor change in order to test Pull Request pipeline)
